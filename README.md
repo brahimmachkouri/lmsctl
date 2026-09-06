@@ -197,23 +197,6 @@ portant exactement le même numéro de version ne pourrait pas restaurer son
 contenu antérieur. La copie de `bin/` et l'unité systemd restent, elles,
 restaurées.
 
-## Développement
-
-```bash
-shellcheck -s bash lmsctl.sh tests/run-tests.sh
-bash tests/run-tests.sh ./lmsctl.sh
-```
-
-La suite ne demande ni root, ni systemd, ni `llmster` : chaque cas source le
-script dans un sous-shell et substitue les appels privilégiés. Les scénarios de
-restauration et les parcours `install`, `update` et `configure` s'exécutent sur
-une arborescence temporaire avec des fac-similés de `systemctl` et de la CLI
-`lms`.
-
-Toute modification touchant `recover`, la sonde de santé ou la génération de
-l'unité doit venir avec son cas de test : ce sont les chemins qu'on ne peut pas
-vérifier à la main sans provoquer de vraie panne.
-
 ## Licence
 
 MIT — voir [LICENSE](LICENSE).
