@@ -36,7 +36,7 @@ git clone https://github.com/brahimmachkouri/lmsctl.git
 cd lmsctl/
 sudo install -m 0755 lmsctl.sh /usr/local/sbin/lmsctl
 sudo tee /etc/default/lmstudio-headless >/dev/null <<'EOF'
-LMS_USER=inference
+LMS_USER=mon-compte-linux
 SERVER_PORT=1234
 BIND_ADDR=127.0.0.1
 EOF
