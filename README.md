@@ -128,16 +128,16 @@ vérifiez que le serveur apparaît, puis sélectionnez ses modèles distants ou
 faites-en le périphérique préféré.
 
 Après le premier `sudo lmsctl install`, connectez une fois le compte de service
-à LM Link. Remplacez `inference` par la valeur de `LMS_USER` :
+à LM Link. Remplacez `mon-compte-linux` par la valeur de `LMS_USER` :
 
 ```bash
-sudo -u inference -H /home/inference/.lmstudio/bin/lms login
+sudo -u mon-compte-linux -H /home/mon-compte-linux/.lmstudio/bin/lms login
 # Suivre le parcours de connexion indiqué dans le terminal.
 
-sudo -u inference -H /home/inference/.lmstudio/bin/lms link enable
-sudo -u inference -H /home/inference/.lmstudio/bin/lms \
-  link set-device-name "inference-01"
-sudo -u inference -H /home/inference/.lmstudio/bin/lms link status
+sudo -u mon-compte-linux -H /home/mon-compte-linux/.lmstudio/bin/lms link enable
+sudo -u mon-compte-linux -H /home/mon-compte-linux/.lmstudio/bin/lms \
+  link set-device-name "mon-compte-linux-01"
+sudo -u mon-compte-linux -H /home/mon-compte-linux/.lmstudio/bin/lms link status
 ```
 
 `ENABLE_LM_LINK=true` fait ensuite exécuter `lms link enable` après chaque
