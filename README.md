@@ -113,7 +113,7 @@ sinon, puisqu'il l'interprète comme du shell dans un processus privilégié.
 LM Link permet à LM Studio sur un poste client (par exemple un Mac) de découvrir
 ce serveur et d'exécuter à distance le chargement et l'inférence. La liaison est
 chiffrée de bout en bout et ne demande **ni** d'exposer l'API du serveur sur le
-réseau, **ni** d'ouvrir `SERVER_PORT` dans le pare-feu. Gardez donc dans le fichier `/etc/default/lmstudio-headless:`
+réseau, **ni** d'ouvrir `SERVER_PORT` dans le pare-feu. Veillez à ce que le fichier `/etc/default/lmstudio-headless` contienne :
 
 ```bash
 BIND_ADDR=127.0.0.1
